@@ -7,7 +7,6 @@
 #include <stdlib.h>
 #include <strings.h>
 // maximum length for names (stations, trains)
-#define NAME_LEN 50
 
 /*--------------Structure Declarations--------------*/
 

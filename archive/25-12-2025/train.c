@@ -32,8 +32,8 @@ void create_train(train_list **list) {
     train *new_train = (train *)malloc(sizeof(train));
     (*list)->train = new_train;
     new_train->train_ID = 1001;
-    new_train->train_schedule.is_set = UNSET; // default flag to UNSET
-    new_train->train_name[0] = '\0';          // flag for unset train_name
+    new_train->train_schedule.schdl_status = UNSET; // default flag to UNSET
+    new_train->train_name[0] = '\0';                // flag for unset train_name
     return;
   }
   // if list has old entries:
@@ -51,8 +51,8 @@ void create_train(train_list **list) {
   train *new_train = (train *)malloc(sizeof(train));
   temp_node->train = new_train;
   new_train->train_ID = (temp_node->train->train_ID) + 1;
-  new_train->train_schedule.is_set = UNSET; // default flag to false
-  new_train->train_name[0] = '\0';          // flag for unset train_name
+  new_train->train_schedule.schdl_status = UNSET; // default flag to false
+  new_train->train_name[0] = '\0';                // flag for unset train_name
 
   return;
 }
@@ -66,7 +66,7 @@ void print_train_info(train *curr_train) {
     printf("\nTrain name:\t%s", (curr_train)->train_name);
   }
   printf("\nTrain Schedule:\t");
-  print_schedule((curr_train)->train_schedule);
+  print_schedule(&((curr_train)->train_schedule));
   printf("\n\t-----------------\n");
 }
 

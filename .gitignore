@@ -1,2 +1,7 @@
 .exe
 .txt
+.vs/*
+CppProperties.json
+.train.c.kate-swp
+*.exe
+*.json
